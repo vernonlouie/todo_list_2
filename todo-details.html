@@ -1,0 +1,15 @@
+<div class="panel" ng-class="{'panel-primary': ($ctrl.itemData.status == 'open'), 'panel-danger':  ($ctrl.itemData.status == 'closed')}">
+    <div class="panel-heading">
+        <h4 ng-click="$ctrl.changeStatus()">{{ $ctrl.itemData.title }}</h4>
+    </div>
+    <div class="panel-body">
+        {{ $ctrl.itemData.details }} <br>
+        {{ $ctrl.itemData.due }} <br>
+        {{ $ctrl.itemData.status }}
+        <button class="btn btn-info pull-right" ng-click="$ctrl.changeStatus()" ng-if="$ctrl.itemData.status === 'open'">Complete</button>
+        <button class="btn btn-danger pull-right" ng-click="$ctrl.del()" ng-if="$ctrl.itemData.status === 'closed'">Delete</button>
+        <div class="completed" ng-if="$ctrl.itemData.status === 'closed'">
+            <img src="http://www.clker.com/cliparts/8/9/4/9/1240848155298205944thatsmyboy_Simple_Red_Checkmark.svg.hi.png" alt="Check mark">
+        </div>
+    </div>
+</div>

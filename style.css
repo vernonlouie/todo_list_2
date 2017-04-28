@@ -1,0 +1,31 @@
+.panel > .panel-body {
+    position: relative;
+}
+
+.panel-heading h4 {
+    cursor: pointer;
+}
+
+.panel-heading h4:hover {
+    text-decoration: underline;
+}
+
+.completed {
+    display: inline-block;
+    position: absolute;
+    border: 10px solid red;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    right: 38%;
+    bottom: 4px;
+    opacity: .4;
+    transition-duration: 3s;
+}
+
+.completed img {
+    position: relative;
+    left: 28px;
+    transform: rotateY(-15deg);
+    width: 80%;
+}
